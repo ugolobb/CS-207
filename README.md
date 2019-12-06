@@ -21,6 +21,10 @@ Bill Of Material
 
 SETUP
 ====================
+![alt text][pic2]
+
+[pic2]: https://github.com/IgaGonzalez/CS-207/blob/master/Screen%20Shot%202019-12-05%20at%2011.07.04%20PM.png "Logo Title Text 2"
+
 
 Technologies
 ============
