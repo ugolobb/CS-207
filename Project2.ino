@@ -1,7 +1,11 @@
+
 const long s = 10; //size of Array
 long buf[s];
 long f=0, b=0;
 long aux = 0;
+long aux1=0;
+
+
 
 void enqueue(long num){
   long nf = (f+1)%s;
@@ -9,11 +13,21 @@ void enqueue(long num){
     f = nf;
     buf[f] = num;
     aux += num;
+    Serial.print("Average: ");
+    Serial.println(aux/s);
+    aux1 += 1; 
   } else {
-    Serial.println("Full");
-    dequeue();
+    //Serial.println("Full");
+    long val = dequeue();
+    //Serial.print("Dequeue: ");
+    //Serial.println(val);
+    
+    //Serial.print("Average: ");
+    //Serial.println(aux/aux1);
   }
 }
+
+// long avg(Array buf, )
 
 int dequeue(){
   if(b != f){
@@ -21,10 +35,11 @@ int dequeue(){
     buf[b] = 0;
     b = (b+1)%s;
     aux -= retval;
+    aux1 -= 1;
     return retval;
   }
   else {
-    Serial.println("EMPTY");
+    //Serial.println("EMPTY");
   }
   return -1;
 }
@@ -44,7 +59,8 @@ void loop() {
     long val = dequeue();
     Serial.print("Dequeue: ");
     Serial.println(val);
-  }
+  }*/
+  enqueue(analogRead(A0));
   for(int i = 0; i < s; i++){
     Serial.print(buf[i]);
     Serial.print("\t");
@@ -60,9 +76,9 @@ void loop() {
     Serial.print("\t");
   }
   Serial.println("");
-  Serial.println(aux/s);
-  delay(1000);*/
-  Serial.println(analogRead(A0));
+  //Serial.println(analogRead(sensorPin));
+  delay(500);
+  //Serial.println(analogRead(A0));
 
   
 }
