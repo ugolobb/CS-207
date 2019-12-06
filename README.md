@@ -25,6 +25,9 @@ SETUP
 
 [pic2]: https://github.com/IgaGonzalez/CS-207/blob/master/Screen%20Shot%202019-12-05%20at%2011.07.04%20PM.png "Logo Title Text 2"
 
+![alt text][pic3]
+
+[pic3]: https://github.com/IgaGonzalez/CS-207/blob/master/IMG_2295.jpg "Logo Title Text 2"
 
 Technologies
 ============
